@@ -1,19 +1,9 @@
-services:
-    reverseproxy:
-        image: reverseproxy
-        ports:
-            - 8080:8080
-            - 8081:8081
-        restart: always
- 
-    nginx:
-        depends_on:
-            - reverseproxy
-        image: nginx:alpine
-        restart: always
- 
-    apache:
-        depends_on:
-            - reverseproxy
-        image: httpd:alpine
-        restart: always
+web:
+  image: nginx
+  volumes:
+   - ./templates:/etc/nginx/templates
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80
