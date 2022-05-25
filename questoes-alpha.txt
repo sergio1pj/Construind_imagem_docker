@@ -1,0 +1,10 @@
+Q1.
+a. docker build -t my-alpha-profiler:beta . 
+b. Uma "multi-stage" permite que você use várias imagens para criar um produto final. Em uma "multi-stage", você tem um único Dockerfile, mas pode definir várias imagens dentro dele para ajudar a construir a imagem final. 
+c. Docker container run --name <nome do contâiner > -p 80:80 -d <nome da imagem> 
+d. Não, você pode criar um container do zero, que não contém nada nem bash, ele conterá apenas os binários que você copia durante o tempo de compilação, caso contrário, ficará vazio. Você pode usar a imagem mínima e reservada do Docker, zero, como ponto de partida para criar contêineres. 
+e. docker container exec -it <container_id> bash
+
+Q2. https://hub.docker.com/repository/docker/sergio2pj/construindo_uma_imagem_no_docker/general
+
+Q3. vi:not found
