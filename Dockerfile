@@ -1,3 +1,2 @@
-FROM nginx:latest
-COPY nginx.conf /etc/nginx/nginx.conf
-RUN apk update && apk add bash
+FROM nginx
+COPY static-html-directory /usr/share/nginx/html
